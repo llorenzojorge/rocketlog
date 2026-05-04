@@ -33,7 +33,7 @@ class UsersController {
     // Desestrutura a senha do usuário de todas as demais informações.
     const { password: _, ...userWithoutPassword} = user
 
-    return response.json(userWithoutPassword)
+    return response.status(201).json(userWithoutPassword)
   }
 }
 
